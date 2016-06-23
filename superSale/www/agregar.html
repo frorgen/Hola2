@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+	<script type="text/javascript" src="bootstrap_Font/js/js/jquery-2.2.2.min.js"></script>
+    <link rel="stylesheet" href="bootstrap_Font/css/bootstrap.css" media="screen" />
+    <link rel="stylesheet" href="bootstrap_Font/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="bootstrap_Font/css/bootstrap-theme.min.css"/>
+	<script src='bootstrap_Font/js/bootstrap.js'></script>
+	<script src='bootstrap_Font/js/bootstrap.min.js'></script>
+	<script src='js/db.js'></script>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Super Sale</title>
+</head>
+<body onload="abrirbd()">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Super Sale</a>
+    </div>
+
+       
+	  	   
+	   <div class="container-fluid"> 	   
+	   <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-6" aria-expanded="true"> 
+	   <ul class="nav navbar-nav navbar-right"> 
+	   <li><button type="button" class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-home"></span>Inicio</button></li>
+	   <li><button type="button" class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-user"></span>Mi Perfil</button></li> 
+	   <li><button type="button" class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-blackboard"></span>Pizarra</button></li> 
+	   <li><button type="button" class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-list-alt"></span>Mis Publicaciones</button></li> 
+	   </ul> 
+	   </div> 
+	   </div>
+		 
+        
+
+  </div>
+</nav>
+
+
+
+<div class="container">
+<form class="form-horizontal" enctype="multipart/form-data">
+     <div class="form-group">
+         
+         <div class="col-xs-10">
+		 <label class="control-label">Descripción:</label>
+             <input type="text" class="form-control" id="descripcion" maxlength="55" placeholder="Máximo 50 caracteres">
+         </div>
+     </div>
+     <div class="form-group">
+         
+         <div class="col-xs-10">
+		 <label  class="control-label">Precio Normal:</label>
+             <input type="text" class="form-control" id="precio_normal" placeholder="Precio Normal">
+         </div>
+     </div>
+     <div class="form-group">
+         
+         <div class="col-xs-10">
+		 <label class="control-label ">Precio Oferta:</label>
+             <input type="text" class="form-control" id="precio_oferta" placeholder="Precio de la Oferta">
+         </div>
+     </div>
+	 <div class="form-group">
+         
+         <div class="col-xs-10">
+		 <label  class="control-label ">Fecha Inicio:</label>
+             <input type="date" id="date_ini" class="form-control" >
+         </div>
+     </div>
+     <div class="form-group">
+         
+         <div class="col-xs-10">
+		 <label class="control-label ">Fecha Término:</label>
+             <input type="date" id="date_fin" class="form-control" >
+         </div>
+     </div>
+     <div class="form-group">
+         <div class="col-xs-10">
+		 <label class="control-label">Supermercado</label>
+		 <input type="text" class="form-control" id="super_" placeholder="Supermercado">
+         
+             
+         </div>
+     </div>
+	 
+	 <div class="form-group">
+         
+         <div class="col-xs-10">
+		 <label class="control-label ">Imagen</label>
+             <input type="file" class="form-control" id="img_oferta" accept="image/png" placeholder="Adjuntar">
+         </div>
+     </div>
+	 
+     <div class="form-group">
+         <div class="col-xs-offset-2 col-xs-5">
+            <button type="button" class="btn btn-warning btn-ms" align="absmiddle" name="button" onclick ="insertar()">Agregar Oferta</button>
+			<button type="button" class="btn btn-default btn-ms" align="absmiddle" name="button" onclick ="limpiar()">Limpiar</button>
+         </div>
+		 
+     </div>
+</form>
+</div>
+   
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>

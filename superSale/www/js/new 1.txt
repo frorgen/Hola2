@@ -1,0 +1,32 @@
+public void copiar(File original, File copia) 
+{ 
+FileInputStream archivoOriginal = null; 
+FileOutputStream archivoCopia = null; 
+if((original != null)&&(copia != null)) 
+{ 
+try 
+{ 
+copia.createNewFile(); 
+archivoOriginal = new FileInputStream(original); 
+archivoCopia = new FileOutputStream(copia); 
+//lectura por segmentos de 0.5MB 
+byte buffer[] = new byte[512*1024]; 
+int nbLectura; 
+while((nbLectura=archivoOriginal.read(buffer)) != -1) 
+{ 
+archivoCopia.write(buffer,0,nbLectura); 
+} 
+}catch(FileNotFoundException fnf){ 
+}catch(IOException io){ 
+}finally{ 
+try 
+{ 
+archivoOriginal.close(); 
+}catch(Exception e){ 
+} 
+try 
+{ 
+archivoCopia.close(); 
+}catch(Exception e){ 
+} 
+} 

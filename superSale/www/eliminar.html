@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+
+<script languaje="javascript">
+function pony_eras(nombre)
+{
+	LeftPos=(screen.width)?(screen.width-200)/1:50;
+	TopPos=(screen.height)?(screen.height-200)/1:50;
+	window.open("eliminar.php?nombre="+nombre+"", "WindowSave", "toolbar=no , scrollbars=yes, resizable=no, width=620, height420, left="+LeftPos+", top="+TopPos);
+}
+</script>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+	<script type="text/javascript" src="bootstrap_Font/js/js/jquery-2.2.2.min.js"></script>
+	
+    <link rel="stylesheet" href="bootstrap_Font/css/bootstrap.css" media="screen" />
+    <link rel="stylesheet" href="bootstrap_Font/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="bootstrap_Font/css/bootstrap-theme.min.css"/>
+	<script src='bootstrap_Font/js/bootstrap.js'></script>
+	<script src='bootstrap_Font/js/bootstrap.min.js'></script>
+	<script src='js/db.js'></script>
+	
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Super Sale</title>
+</head>
+
+<body onload="onDeviceReady()">
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Super Sale</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Administración<span class="caret"></span></a>
+          <ul class="collapse" id="collapseExample" >
+            <li><a href="#">Perfil</a></li>
+            <li><a href="#">Alertas</a></li>
+            <li><a href="#">Mis Ofertas</a></li>
+            <li><a href="#">Silenciar</a></li>
+          </ul>
+        </li>
+      </ul>
+	  
+	  
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+<div class="container-fluid">
+
+<form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+		  <button type="button" class="btn btn-default" aria-label="Left Align">
+				<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+		   </button>
+        </div>  
+</form>
+</div>
+
+
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="img/aceite.jpg" alt="...">
+      <div class="caption">
+        <h3 class="text-center">$1.180</h3>
+        <h4 class="text-center">Chef,  Aceite de Maravilla Botella 500 ml</h4>
+        <p class="text-center">Supermercado Lider</p>
+        <p><a href="#" class="btn btn-primary" role="button">Boton</a></p>
+        <p><a href="#" action="editar" value="editar" class="btn btn-default" role="button">Boton</a></p>
+		<p><input name="boton" type="submit" onclick="editar()" action="editar" value="editar" align="middle" /></p>
+<script languaje="javascript">
+function editar(hola)
+{
+	LeftPos=(screen.width)?(screen.width-200)/1:50;
+	TopPos=(screen.height)?(screen.height-200)/1:50;
+	window.open("hola","WindowSave", "toolbar=no , scrollbars=yes, resizable=no,width=620, height420, left="+LeftPos+", top="+TopPos);
+}
+</script>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+    <!--<script type="text/javascript" src="cordova.js"></script>-->
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>
